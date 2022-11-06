@@ -16,7 +16,7 @@ import { skills, categories } from '../data/resume/skills';
 
 const sections = [
   'Education',
-  'Experience',
+  'Industry',
   'Skills',
   'Courses',
   'References',
@@ -24,26 +24,29 @@ const sections = [
 
 const Resume = () => (
   <Main
-    title="Resume"
-    description="Michael D'Angelo's Resume. Arthena, Matroid, YC, Skeptical Investments, Stanford ICME, Planet Labs, and Facebook."
+    title="Experience"
+    description="Michael S. Eperience"
   >
     <article className="post" id="resume">
       <header>
         <div className="title">
-          <h2 data-testid="heading"><Link to="resume">Resume</Link></h2>
+          <h2 data-testid="heading"><Link to="resume">Experience</Link></h2>
           <div className="link-container">
-            {sections.map((sec) => (
-              <h4 key={sec}>
-                <a href={`#${sec.toLowerCase()}`}>{sec}</a>
-              </h4>))}
+            {sections.map((sec, index) => (
+              <a href={`#${sec.toLowerCase()}`}><b>{sec.toUpperCase()}</b>{index === sections.length - 1 ? '' : ' - '}</a>
+            ))}
           </div>
 
         </div>
       </header>
       <Education data={degrees} />
+      <br />
       <Experience data={positions} />
+      <br />
       <Skills skills={skills} categories={categories} />
+      <br />
       <Courses data={courses} />
+      <br />
       <References />
 
     </article>

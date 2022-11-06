@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 import Job from './Experience/Job';
 
 const Experience = ({ data }) => (
-  <div className="experience">
-    <div className="link-to" id="experience" />
+  <div className="industry">
+    <div className="link-to" id="industry" />
     <div className="title">
-      <h3>Experience</h3>
+      <h2>INDUSTRY</h2>
     </div>
     {data.map((job) => (
       <Job
@@ -25,6 +25,10 @@ Experience.propTypes = {
     link: PropTypes.string,
     daterange: PropTypes.string,
     points: PropTypes.arrayOf(PropTypes.string),
+    projects: PropTypes.arrayOf(PropTypes.shape({
+      name: PropTypes.string,
+      points: PropTypes.arrayOf(PropTypes.string),
+    })),
   })),
 };
 

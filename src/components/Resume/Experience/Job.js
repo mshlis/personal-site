@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const Job = ({ data }) => (
   <article className="jobs-container">
     <header>
-      <h4><a href={data.link}>{data.company}</a> - {data.position}</h4>
+      <h3><a href={data.link}>{data.company}</a> - {data.position}</h3>
       <p className="daterange"> {data.daterange}</p>
     </header>
     <ul className="points">
@@ -12,6 +12,15 @@ const Job = ({ data }) => (
         <li key={point}>{point}</li>
       ))}
     </ul>
+    {data.projects.map((proj) => (
+      <div className="key-proj">
+        <h4>KEY PROJECT: {proj.name}</h4>
+        {proj.points.map((ppoint) => (
+          <li key={ppoint}>{ppoint}</li>
+        ))}
+        <br />
+      </div>
+    ))}
   </article>
 );
 
@@ -22,6 +31,10 @@ Job.propTypes = {
     position: PropTypes.string.isRequired,
     daterange: PropTypes.string.isRequired,
     points: PropTypes.arrayOf(PropTypes.string).isRequired,
+    projects: PropTypes.arrayOf(PropTypes.shape({
+      name: PropTypes.string,
+      points: PropTypes.arrayOf(PropTypes.string),
+    })),
   }).isRequired,
 };
 

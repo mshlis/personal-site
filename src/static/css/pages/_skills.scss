@@ -21,9 +21,15 @@
 
 .skillbar {
 	position:relative;
-	display:block;
+	// box-sizing: border-box;
+	// display:block;
+	// display: inline-block;
+	// block-size: fit-content;
 	margin-bottom:15px;
-	width:100%;
+	// width: fit-content;
+	width: 15%;
+	white-space: nowrap;
+	// overflow: hidden;
 	background:#eee;
 	height:35px;
 	border-radius:3px;
@@ -43,19 +49,21 @@
 
 
 .skillbar-title {
-	position:absolute;
-	top:0;
-	left:0;
-	font-weight:bold;
-	font-size:13px;
-	color:#fff;
-	background:#6adcfa;
-	-webkit-border-top-left-radius:3px;
-	-webkit-border-bottom-left-radius:4px;
-	-moz-border-radius-topleft:3px;
-	-moz-border-radius-bottomleft:3px;
-	border-top-left-radius:3px;
-	border-bottom-left-radius:3px;
+	position:relative;
+	top: 0;
+	left: 0;
+	width: fit-content;
+	display: inline-flex;
+	// width: 10%;
+	font-weight: bold;
+	font-size: 13px;
+	color: #fff;
+	white-space: nowrap;
+	overflow: hidden;
+	background: #6adcfa;
+	border-radius: 3px;
+	margin-bottom: 15px;
+	margin-right: 15px;
 }
 
 .skillbar-title span {

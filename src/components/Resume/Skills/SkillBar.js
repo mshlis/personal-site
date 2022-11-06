@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const SkillBar = ({ data, categories }) => {
-  const { category, competency, title } = data;
+  const { category, title } = data;
 
   // TODO: Consider averaging colors
   const titleStyle = {
@@ -11,18 +11,19 @@ const SkillBar = ({ data, categories }) => {
       .map((cat) => cat.color)[0],
   };
 
-  const barStyle = {
-    ...titleStyle,
-    width: `${String(Math.min(100, Math.max((competency / 5.0) * 100.0, 0)))}%`,
-  };
+  // const barStyle = {
+  //   ...titleStyle,
+  //   width: '10%',
+  // };
+  return (<div className="skillbar-title" style={titleStyle}><span>{title}</span></div>);
 
-  return (
-    <div className="skillbar clearfix">
-      <div className="skillbar-title" style={titleStyle}><span>{title}</span></div>
-      <div className="skillbar-bar" style={barStyle} />
-      <div className="skill-bar-percent">{competency} / 5</div>
-    </div>
-  );
+  // return (
+  //   <div className="skillbar">
+  //     <div className="skillbar-title" style={titleStyle}><span>{title}</span></div>
+  //     {/* <div className="skillbar-bar" style={titleStyle} /> */}
+  //     {/* <div className="skill-bar-percent">{competency} / 5</div> */}
+  //   </div>
+  // );
 };
 
 SkillBar.propTypes = {

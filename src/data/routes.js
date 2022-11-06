@@ -1,7 +1,7 @@
 const routes = [
   {
     index: true,
-    label: "Michael D'Angelo",
+    label: 'Michael E. Shliselberg',
     path: '/',
   },
   {
@@ -9,17 +9,17 @@ const routes = [
     path: '/about',
   },
   {
-    label: 'Resume',
+    label: 'Experience',
     path: '/resume',
   },
   {
     label: 'Projects',
     path: '/projects',
   },
-  {
-    label: 'Stats',
-    path: '/stats',
-  },
+  // {
+  //   label: 'Stats',
+  //   path: '/stats',
+  // },
   {
     label: 'Contact',
     path: '/contact',

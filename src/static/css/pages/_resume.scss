@@ -25,7 +25,7 @@
 			margin-bottom: 2em;
 		}
 	}
-	.experience {
+	.industry {
 		.title {
 			text-align: center;
 		}
@@ -44,6 +44,9 @@
 				padding: 0;
 					font-size: .9em;
 			}
+		}
+		.key-proj {
+			margin-left: 30px;
 		}
 	}
 
@@ -84,20 +87,21 @@
 
 .degree-container {
 	h4 {
-		font-weight: normal;
+		// font-weight: normal;
 	}
 
 	.degree {
 		margin-bottom: .1em;
 		text-transform: none;
 		letter-spacing: 0.16em;
-		font-size: .8em;
+		font-size: 1em;
 	}
 
 	.school {
 		text-transform: none;
 		padding-top: 0.3em;
 		margin-bottom: 1em;
+		font-size: .8em;
 	}
 }
 

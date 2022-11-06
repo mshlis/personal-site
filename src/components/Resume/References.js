@@ -1,14 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+import references from '../../data/resume/references';
 
 const References = () => (
-  <div className="references">
-    <div className="link-to" id="references" />
+  <div className="references" id="references">
     <div className="title">
-      <Link to="/contact">
-        <h3>References are available upon request</h3>
-      </Link>
+      <h2>References</h2>
     </div>
+    {references.map((ref) => (ref))}
   </div>
 );
 
