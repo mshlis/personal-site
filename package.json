@@ -25,7 +25,7 @@
     "@fortawesome/free-regular-svg-icons": "^6.1.1",
     "@fortawesome/react-fontawesome": "0.1.18",
     "dayjs": "^1.11.3",
-    "gh-pages": "^4.0.0",
+    "gh-pages-cli": "^0.2.0",
     "mathjax-full": "^3.2.2",
     "mathjax-react": "^2.0.1",
     "prop-types": "^15.8.1",
@@ -55,6 +55,7 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsx-a11y": "6.5.1",
     "eslint-plugin-react": "^7.30.0",
+    "gh-pages": "^4.0.0",
     "sass": "^1.52.3",
     "source-map-explorer": "^2.5.2"
   },
