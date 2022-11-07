@@ -4,7 +4,8 @@ import ReactMarkdown from 'react-markdown';
 import remarkMath from 'remark-math';
 import remarkParse from 'remark-parse';
 import rehypeMathjax from 'rehype-mathjax';
-import MathJax from 'react-mathjax';
+// import MathJax from 'react-mathjax';
+import { MathJaxContext, MathJax } from 'better-react-mathjax';
 import rehypeKatex from 'rehype-katex';
 
 import raw from 'raw.macro';
@@ -31,18 +32,23 @@ const Blog = (props) => {
       description="Fun little posts"
     >
       <article className="post markdown" id="about">
-        <MathJax.Provider input="tex">
+        {/* <MathJax.Provider input="tex"> */}
+        <MathJaxContext>
             <ReactMarkdown
             source={markdown}
             plugins={[remarkParse, remarkMath, rehypeMathjax]}
+            // plugins={[remarkParse, remarkMath, rehypeMathjax]}
             renderers={{
                 Link: LinkRenderer,
-                math: ({ value }) => { console.log(`full-line: ${value}`); return (<MathJax.Node formula={value} />); },
-                inlineMath: ({ value }) => { console.log(`inline: ${value}`); return (<MathJax.Node inline formula={value} />); },
+                math: ({ value }) => { console.log(`full-line: ${value}`); return (<MathJax>{value}</MathJax>); },
+                inlineMath: ({ value }) => { console.log(`inline: ${value}`); return (<MathJax inline>{value}</MathJax>); },
+                // math: ({ value }) => { console.log(`full-line: ${value}`); return (<MathJax.Node formula={value} />); },
+                // inlineMath: ({ value }) => { console.log(`inline: ${value}`); return (<MathJax.Node inline formula={value} />); },
             }}
             escapeHtml={false}
             />
-        </MathJax.Provider>
+        </MathJaxContext>
+        {/* </MathJax.Provider> */}
       </article>
     </Main>
   );
