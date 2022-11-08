@@ -1,7 +1,7 @@
 // TODO Add a couple lines about each project
 const data = [
   {
-    title: 'Super-Masks: Are They Good Initializations?',
+    title: 'Cubic Step: We Have More Info, Lets Use It!',
     image: '/images/CubicStep/example_curves.png',
     date: '2019-11-25',
     handle: '2019-11-25-CubicStep',

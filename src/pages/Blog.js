@@ -4,9 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkMath from 'remark-math';
 import remarkParse from 'remark-parse';
 import rehypeMathjax from 'rehype-mathjax';
-// import MathJax from 'react-mathjax';
 import { MathJaxContext, MathJax } from 'better-react-mathjax';
-import rehypeKatex from 'rehype-katex';
 
 import raw from 'raw.macro';
 import PropTypes from 'prop-types';
@@ -15,6 +13,18 @@ import Main from '../layouts/Main';
 
 // Make all hrefs react router links
 const LinkRenderer = ({ ...children }) => <Link {...children} />;
+const config = {
+  loader: { load: ['[tex]/html'] },
+  tex: {
+    packages: { '[+]': ['html'] },
+    inlineMath: [
+      ['$', '$'],
+    ],
+  },
+  startup: {
+    typeset: false,
+  },
+};
 
 const Blog = (props) => {
   const markdownMap = {
@@ -32,23 +42,18 @@ const Blog = (props) => {
       description="Fun little posts"
     >
       <article className="post markdown" id="about">
-        {/* <MathJax.Provider input="tex"> */}
-        <MathJaxContext>
-            <ReactMarkdown
+        <MathJaxContext version={3} config={config}>
+          <ReactMarkdown
             source={markdown}
             plugins={[remarkParse, remarkMath, rehypeMathjax]}
-            // plugins={[remarkParse, remarkMath, rehypeMathjax]}
             renderers={{
-                Link: LinkRenderer,
-                math: ({ value }) => { console.log(`full-line: ${value}`); return (<MathJax>{value}</MathJax>); },
-                inlineMath: ({ value }) => { console.log(`inline: ${value}`); return (<MathJax inline>{value}</MathJax>); },
-                // math: ({ value }) => { console.log(`full-line: ${value}`); return (<MathJax.Node formula={value} />); },
-                // inlineMath: ({ value }) => { console.log(`inline: ${value}`); return (<MathJax.Node inline formula={value} />); },
+              Link: LinkRenderer,
+              math: ({ value }) => <MathJax>{value}</MathJax>,
+              inlineMath: ({ value }) => <MathJax inline>{`$${value}$`}</MathJax>,
             }}
             escapeHtml={false}
-            />
+          />
         </MathJaxContext>
-        {/* </MathJax.Provider> */}
       </article>
     </Main>
   );

@@ -7,26 +7,28 @@ const Cell = ({ data }) => {
   const imgObj = data.link ? (
     <a href={data.link} className="image">
       <img src={`${process.env.PUBLIC_URL}${data.image}`} alt={data.title} />
+      {/* {originalImage} */}
     </a>
   ) : (
     <Link to={`/posts/${data.handle}`} className="image">
-      <img src={`${process.env.PUBLIC_URL}${data.image}`} alt={data.title} height="500px" />
+      <img src={`${process.env.PUBLIC_URL}${data.image}`} alt={data.title} />
+      {/* {ctx.drawImage(originalImage)} */}
     </Link>
   );
   return (
-  <div className="cell-container">
-    <article className="mini-post">
-      <header>
-        <h3><a href={data.link}>{data.title}</a></h3>
-        <time className="published">{dayjs(data.date).format('MMMM, YYYY')}</time>
-      </header>
-      {imgObj}
-      <div className="description">
-        <p>{data.desc}</p>
-      </div>
-    </article>
-  </div>
-);
+    <div className="cell-container">
+      <article className="mini-post">
+        <header>
+          <h3><a href={data.link}>{data.title}</a></h3>
+          <time className="published">{dayjs(data.date).format('MMMM, YYYY')}</time>
+        </header>
+        {imgObj}
+        <div className="description">
+          <p>{data.desc}</p>
+        </div>
+      </article>
+    </div>
+  );
 };
 
 Cell.propTypes = {

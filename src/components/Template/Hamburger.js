@@ -7,6 +7,14 @@ const Menu = lazy(() => import('react-burger-menu/lib/menus/slide'));
 
 const Hamburger = () => {
   const [open, setOpen] = useState(false);
+  // const createHeaderButton = (l) => (l.path ? (
+  //     <Link to={l.path} onClick={() => setOpen(!open)}>
+  //       <h3 className={l.index && 'index-li'}>{l.label}</h3>
+  //     </Link>) : (
+  //     <a href={l.download}>
+  //       <h3 className={l.index && 'index-li'}>{l.label}</h3>
+  //     </a>)
+  //   );
 
   return (
     <div className="hamburger-container">
@@ -28,6 +36,7 @@ const Hamburger = () => {
           <ul className="hamburger-ul">
             {routes.map((l) => (
               <li key={l.label}>
+                {/* {createHeaderButton(l)} */}
                 <Link to={l.path} onClick={() => setOpen(!open)}>
                   <h3 className={l.index && 'index-li'}>{l.label}</h3>
                 </Link>

@@ -23,6 +23,7 @@ Excusing my terrible drawings in the figure, the idea is that even with maintain
 
 
 $$
+\begin{equation}
 \begin{pmatrix} 1 & w_0 & w_0^2 & w_0^3 \\ 
                 1 & w_1 & w_1^2 & w_1^3 \\ 
                 0 & 1 & 2w_0 & 3w_0^2 \\ 
@@ -35,11 +36,13 @@ $$
                 l(w_1) \\ 
                 l'(w_0) \\ 
                 l'(w_1) \end{pmatrix}
+\end{equation}
 $$  
                 
 or equivalently:
 
 $$
+\begin{equation}
 \begin{pmatrix} \alpha_0 \\ 
                   \alpha_1 \\ 
                   \alpha_2 \\ 
@@ -52,6 +55,7 @@ $$
                 l(w_1) \\ 
                 l'(w_0) \\ 
                 l'(w_1) \end{pmatrix}
+\end{equation}
 $$  
                 
 

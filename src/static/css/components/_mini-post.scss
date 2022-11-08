@@ -53,6 +53,7 @@
   .image {
     overflow: hidden;
     width: 100%;
+    max-height: 500px;
 
     img {
       @include vendor( 'transition', 'transform #{_duration(transition)} ease-out');

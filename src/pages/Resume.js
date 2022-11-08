@@ -33,7 +33,7 @@ const Resume = () => (
           <h2 data-testid="heading"><Link to="resume">Experience</Link></h2>
           <div className="link-container">
             {sections.map((sec, index) => (
-              <a href={`#${sec.toLowerCase()}`}><b>{sec.toUpperCase()}</b>{index === sections.length - 1 ? '' : ' - '}</a>
+              <a href={`#${sec.toLowerCase()}`} key={sec}><b>{sec.toUpperCase()}</b>{index === sections.length - 1 ? '' : ' - '}</a>
             ))}
           </div>
 

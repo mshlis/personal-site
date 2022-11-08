@@ -1,3 +1,5 @@
+const { PUBLIC_URL } = process.env;
+
 const routes = [
   {
     index: true,
@@ -16,10 +18,10 @@ const routes = [
     label: 'Blog Posts / Side Projects',
     path: '/projects',
   },
-  // {
-  //   label: 'Stats',
-  //   path: '/stats',
-  // },
+  {
+    label: 'Resume',
+    download: `${PUBLIC_URL}/Resume_Michael_Shliselberg_11_8_22.pdf`,
+  },
   {
     label: 'Contact',
     path: '/contact',

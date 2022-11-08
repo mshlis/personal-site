@@ -5,7 +5,10 @@ import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons/faLinkedinIn';
 // import { faAngellist } from '@fortawesome/free-brands-svg-icons/faAngellist';
 // import { faTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons/faEnvelope';
+// import { IconName } from '@fortawesome/fontawesome-common-types';
+// import { faInnosoft } from '@fortawesome/free-brands-svg-icons';
 // See https://fontawesome.com/icons?d=gallery&s=brands,regular&m=free
+import { faLink } from '@fortawesome/fontawesome-free-solid';
 // to add other icons.
 
 const data = [
@@ -43,6 +46,11 @@ const data = [
     link: 'mailto:mishliselberg@gmail.com',
     label: 'Email',
     icon: faEnvelope,
+  },
+  {
+    link: 'https://ai.stackexchange.com/users/25496/mshlis',
+    label: 'ai.SE',
+    icon: faLink,
   },
 ];
 

@@ -29,7 +29,6 @@ const SkillBar = ({ data, categories }) => {
 SkillBar.propTypes = {
   data: PropTypes.shape({
     category: PropTypes.arrayOf(PropTypes.string).isRequired,
-    competency: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
   }).isRequired,
   categories: PropTypes.arrayOf(PropTypes.shape({

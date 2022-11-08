@@ -13,7 +13,7 @@ const Job = ({ data }) => (
       ))}
     </ul>
     {data.projects.map((proj) => (
-      <div className="key-proj">
+      <div className="key-proj" key={proj.name}>
         <h4>KEY PROJECT: {proj.name}</h4>
         {proj.points.map((ppoint) => (
           <li key={ppoint}>{ppoint}</li>
