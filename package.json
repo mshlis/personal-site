@@ -21,7 +21,7 @@
     "analyze": "npm run build && source-map-explorer build/static/js/*.chunk.js"
   },
   "resolutions": {
-    "graceful-fs": "^4.2.9"
+    "graceful-fs": "^4.2.10"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free-solid": "^5.0.13",
