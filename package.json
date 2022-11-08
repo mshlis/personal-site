@@ -11,6 +11,7 @@
     "node": ">=14.x"
   },
   "scripts": {
+    "preinstall": "npx npm-force-resolutions",
     "build": "rimraf ./build && react-scripts build",
     "predeploy": "npm run build && react-snap",
     "deploy": "gh-pages -d build",
@@ -18,6 +19,9 @@
     "lint": "eslint $(git ls-files '*.js')",
     "test": "react-scripts test --watchAll=false",
     "analyze": "npm run build && source-map-explorer build/static/js/*.chunk.js"
+  },
+  "resolutions": {
+    "graceful-fs": "^4.2.9"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free-solid": "^5.0.13",
