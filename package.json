@@ -5,7 +5,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mshlis/personal-site.git"
+    "url": "https://github.com/mshlis/mshlis.github.io.git"
   },
   "engines": {
     "node": ">=14.x"
