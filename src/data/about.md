@@ -16,6 +16,8 @@ Some other fun stuff about me:
    - Favorite non-technical quote: "*if I weren't crazy, id be insane*" - The Joker
    - For Halloween in 3rd grade, I was a stoplight     
    - High Variance Bowler  
-   - Favorite show was 'The Mentalist'
-   - Favorite movie is 'The Dark Knight'
+   - Favorite show: *The Mentalist*
+   - Favorite movie: *The Dark Knight*
+   - Favorite anime: *Code Geass*
    - Avid Overwatch fan (Go Boston Uprising!)
+   - Love the Celtics!!!
