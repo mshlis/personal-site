@@ -13,9 +13,6 @@ const Index = () => (
       <header>
         <div className="title">
           <h2 data-testid="heading"><Link to="/">Michael Shliselberg&apos;s Personal Site</Link></h2>
-          {/* <p>
-            Stat
-          </p> */}
         </div>
       </header>
       <p> I plan to use this site as a digital resume and outlet of sorts. Please feel free to read

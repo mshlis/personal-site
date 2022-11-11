@@ -8,10 +8,12 @@ import Experience from '../components/Resume/Experience';
 import Skills from '../components/Resume/Skills';
 import Courses from '../components/Resume/Courses';
 import References from '../components/Resume/References';
+import Undergrad from '../components/Resume/Undergrad';
 
 import courses from '../data/resume/courses';
 import degrees from '../data/resume/degrees';
 import positions from '../data/resume/positions';
+import undergrad from '../data/resume/undergrad';
 import { skills, categories } from '../data/resume/skills';
 
 const sections = [
@@ -19,6 +21,7 @@ const sections = [
   'Industry',
   'Skills',
   'Courses',
+  'Undergrad',
   'References',
 ];
 
@@ -46,6 +49,8 @@ const Resume = () => (
       <Skills skills={skills} categories={categories} />
       <br />
       <Courses data={courses} />
+      <br />
+      <Undergrad data={undergrad} />
       <br />
       <References />
 
