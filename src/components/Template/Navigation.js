@@ -16,7 +16,6 @@ const Navigation = () => (
   <header id="header">
     <h1 className="index-link">
       {routes.filter((l) => l.index).map((l) => (
-        // <Link key={l.label} to={l.path}>{l.label}</Link>
         createHeaderButton(l, l.label)
       ))}
     </h1>
